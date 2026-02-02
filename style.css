@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #fafafa;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 16px 80px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.poem-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Instagram-style card */
+.poem-card {
+  background: #ffffff;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.poem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.poem-content {
+  padding: 24px;
+}
+
+.poem-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+}
+
+/* Preview + fade */
+.preview-wrapper {
+  position: relative;
+  max-height: 9em;
+  overflow: hidden;
+}
+
+.poem-preview {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  color: #444;
+  margin: 0;
+}
+
+/* Fade overlay */
+.fade-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.5em;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.95)
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.fade-overlay span {
+  font-size: 0.75rem;
+  color: #888;
+  padding-bottom: 6px;
+}
+
+/* Footer inside card */
+.poem-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #eee;
+  font-size: 0.8rem;
+  color: #999;
+  text-align: center;
+}
+
+footer {
+  margin-top: 70px;
+  text-align: center;
+  color: #aaa;
+  font-size: 0.9rem;
+}
